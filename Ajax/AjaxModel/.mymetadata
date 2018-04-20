@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="AjaxModel"
+  id="myeclipse.1503280911248"
+  context-root="/AjaxModel"
+  j2ee-spec="6.0"
+  archive="AjaxModel.war">
+  <attributes>
+    <attribute name="webrootdir" value="WebRoot" />
+  </attributes>
+</project-module>
+

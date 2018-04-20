@@ -1,0 +1,61 @@
+BODY {
+	FONT-SIZE: 12px;
+}
+A {
+	COLOR: #2f5fa1; TEXT-DECORATION: none
+}
+A:hover {
+	TEXT-DECORATION: underline
+}
+TEXTAREA {
+	BORDER-RIGHT: #a6cbe7 1px solid; BORDER-TOP: #a6cbe7 1px solid; BORDER-LEFT: #a6cbe7 1px solid; BORDER-BOTTOM: #a6cbe7 1px solid
+}
+.gray {
+	COLOR: #818a89
+}
+.btn {
+	BORDER-RIGHT: #002D96 1px solid; PADDING-RIGHT: 2px; BORDER-TOP: #002D96 1px solid; PADDING-LEFT: 2px; FONT-SIZE: 12px; FILTER: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr=#FFFFFF, EndColorStr=#9DBCEA); BORDER-LEFT: #002D96 1px solid; CURSOR: hand; COLOR: black; PADDING-TOP: 2px; BORDER-BOTTOM: #002D96 1px solid 
+}
+.btn1 { 
+	background: #F2F2F2; border: #333333 1px solid; color: #333333; cursor: hand; font-size: 9pt; height: 20px; padding: 1px
+}
+.input {
+	BORDER-RIGHT: #a6cbe7 1px solid; PADDING-RIGHT: 0px; BORDER-TOP: #a6cbe7 1px solid; PADDING-LEFT: 1px; FONT-SIZE: 1em; PADDING-BOTTOM: 2px; VERTICAL-ALIGN: middle; BORDER-LEFT: #a6cbe7 1px solid; PADDING-TOP: 2px; BORDER-BOTTOM: #a6cbe7 1px solid
+}
+.t {
+	BORDER-RIGHT: #999999 1px solid; BORDER-TOP: #999999 1px solid; MARGIN: 0px auto 8px; BORDER-LEFT: #999999 1px solid; BORDER-BOTTOM: #999999 1px solid; width:500px
+}
+.t TABLE {
+	BORDER-RIGHT: #fff 1px solid; BORDER-TOP: #fff 1px solid; MARGIN: 0px auto; BORDER-LEFT: #fff 1px solid; WIDTH: 99.98%; BORDER-BOTTOM: #fff 1px solid
+}
+
+.t1 {
+	width:90%; border-color:#999999; border-width:0px; border-style:solid; position:relative; top:0px; left:20px;
+}
+.t2 {
+	background-color: #98AB6F ;	
+}
+.t3 {
+	BORDER-TOP: #999999 0px solid; MARGIN: 0px auto 8px; BORDER-LEFT: #999999 0px solid; BORDER-BOTTOM: #999999 0px solid; width:700px
+}
+.t3 table {
+	width:100%	
+}
+.t3 TD {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 2px; PADDING-BOTTOM: 0px; LINE-HEIGHT: 21px; BORDER-BOTTOM: #999999 1px solid
+}
+.t3 TH {
+	text-align : left 	
+}
+.tipad {
+	PADDING-RIGHT: 0px; BORDER-BOTTOM: #999999 1px solid; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 10px 0px 0px; PADDING-TOP: 5px
+}
+.tsize1{
+	FONT-SIZE: 13px;
+}
+.position1{
+	position:relative; left:100px; top:10px;width:100px;border-color:#a6cbe7;border-width:1px;border-style:solid;
+}
+.position2{
+	position:relative; left:300px; top:-7px;width:100px;border-color:#a6cbe7;border-width:1px;border-style:solid
+}

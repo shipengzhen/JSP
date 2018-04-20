@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="MessageBoard"
+  id="myeclipse.1498784760422"
+  context-root="/MessageBoard"
+  j2ee-spec="6.0"
+  archive="MessageBoard.war">
+  <attributes>
+    <attribute name="webrootdir" value="WebRoot" />
+  </attributes>
+</project-module>
+

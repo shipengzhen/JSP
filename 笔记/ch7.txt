@@ -1,0 +1,50 @@
+http  是 TCP
+
+jsp 突出HTML		编译前的Servlet
+
+Servlet 突出java	编译后的jsp
+
+
+
+service		分发器
+
+
+Session 使用
+
+HttpSession session=request.getSession();
+
+PrintWriter out=response.getWriter();
+
+
+局部变量 只对	doLogin 有效
+
+<servlet>
+    <servlet-name>doLogin</servlet-name>
+    <servlet-class>com.lz.web.doLogin</servlet-class>
+    <init-param>
+    	<param-name>encoding</param-name>
+    	<param-value>utf-8</param-value>
+    </init-param>
+</servlet>
+调用：
+request.setCharacterEncoding(getInitParameter("encoding"));
+
+
+全局
+
+<web-app>
+	<param-name>encoding</param-name>
+    	<param-value>utf-8</param-value>
+</web-app>
+读取：
+request.setCharacterEncoding(this.getServletContext().getInitParameter("encoding"));
+
+
+
+
+
+
+
+
+
+

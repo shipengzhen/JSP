@@ -1,0 +1,4 @@
+ //分页公式：select top 页大小  from  表面 where id not in(select top(pageNo-1)* pageSize from 表名)，
+ 
+ //条件？真:假
+ 

@@ -1,0 +1,16 @@
+//ÀúÊ·¼ÇÂ¼
+	Cookie cookie=new Cookie(spid,spid);
+	cookie.setMaxAge(300);
+	response.addCookie(cookie);
+	
+	
+	
+	Cookie[] cookies=request.getCookies();
+	System.out.println(cookies);
+	if(cookies!=null){
+		for(int ii=0;ii<cookies.length;ii++){
+			System.out.println(cookies[ii].getName());
+			System.out.println(cookies[ii].getValue());
+			request.setAttribute("lsjl",spDao.findxqsp(Integer.parseInt(cookies[ii].getValue())));
+		}
+	}

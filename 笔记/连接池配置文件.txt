@@ -1,0 +1,33 @@
+第一步	. Context.xml  在<Context></Context>内
+
+<Resource
+	name="MySchool" auth="Container" type="javax.sql.DataSource" 
+	maxActive="100" maxIdle="30" maxWait="10000" 
+	username="lz" password="lz"
+	driverClassName="com.microsoft.sqlserver.jdbc.SQLServerDriver"
+	url="jdbc:sqlserver://localhost:1433;DatabaseName=MySchool"
+/>
+
+	* ：maxActive: 最大连接数目 （Connection）
+	    maxIdle: 空闲时候最大连接数目
+	    maxWait：最大等待时间（毫秒） 超出抛异常
+
+第二步. 在tomcat 的 lib 中 导入 jar包
+
+
+第三步. 在 MyEclipse的 web.xml 中 加入：
+	
+	<resource-ref>
+		<description>news DataSource</description>
+    		<res-ref-name>MySchool</res-ref-name>
+   	 	<res-type> javax.sql.DataSource </res-type>
+   		<res-auth> Container </res-auth>
+        </resource-ref>
+		
+
+
+	* ：    在basedao 中获取
+	
+		Context ctx=new InitialContext();
+		DataSource ds=(DataSource)ctx.lookup("java:comp/env/MySchool");
+		conn=ds.getConnection();

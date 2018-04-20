@@ -1,0 +1,109 @@
+	up第10章：Ajax
+
+一、原生js版
+
+	window.onload=function(){
+
+		//1、创建XMLHttpRequest对象
+		var xr;
+		if (window.XMLHttpRequest) {
+			//新版IE或其他浏览器
+			xr=new XMLHttpRequest();
+		} else{
+			//IE6及以下
+			xr=new ActiveXObject("Microsoft.XMLHTTP");
+		}
+		
+		//2、设置回调函数，此函数在状态码发生改变时触发
+		xr.onreadystatechange=function(){
+			//如果请求状态是4且HTTP状态码是200，方可处理服务器数据
+			if(xr.readyState==4&&xr.status==200){
+				var s=xr.responseText;//服务器返回的字符串
+				//$("#test").html(s);
+			}
+		};
+		
+		//==>>如果为get提交方式
+		//原声ajax用get中文乱码能乱到你哭
+		//3、初始化XMLHttpRequest组件，提交方式、URL、是否为异步
+		xr.open("get","info.jsp?name="+name,true);
+		
+		//4、发送请求，get参数为null
+		xr.send(null);
+		
+		
+		//==>>如果为Post提交方式
+		//3、初始化XMLHttpRequest组件，提交方式、URL、是否为异步
+		xr.open("POST","info.jsp",true);
+		//单独设置请求的某个HTTP信息
+		xr.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+		
+		//4、发送请求,把要传递的数据带上
+		xr.send("name="+name+"&pwd="+pwd);
+		
+		//用get传递数据时，容易中文乱码或者出错，post不会
+		//js对中文转码
+		name=encodeURI(name);
+		//服务器解码
+		//name=new String(name.getBytes("ISO-8859-1"),"UTF-8");
+
+	}
+	
+二、jquery版
+	//完整版
+	$.ajax({
+		type:"post",		//请求方式
+		url:"do_info.jsp",	//地址
+		data:{name:name},	//发送给服务器的json数据，无须中文转码
+		dataType:"text",	//预期从服务器得到的数据类型XML、HTML、SCRIPT、JSON、JSONP、Text
+		timeout:1000,		//请求超时时间，单位/ms
+		error:function(e){},	//请求失败的回调
+		success:function(data){},//请求成功的回调函数
+		complete:function(){}	//请求成功、失败都会走的回调
+	});
+	
+	   例：	$.ajax({
+			type:"post",
+			url:"do_info.jsp",
+			data:{name:name},
+			success:function(data){
+				var s=data.toString().trim();
+				//开始判断if(s=="1"){......}
+			}
+		});
+
+	
+
+
+
+
+三、JSON
+	1、定义：var s={K:V,K:V,…};	
+	    例：var user={"id":1,"name":"张三","pwd":"000"};
+	2、取值：var name=user.name;
+	3、String转json：
+			var son=$.parseJSON(data);
+			var son=JSON.parse(data)
+		  万能：	var son=eval('('+data+')');
+			//此方法将String串翻译成JS代码脚本并执行，
+			//返回一个值（前提是能够返回），这里恰好让它返回一个JSON
+	   json转String：
+			var str=JSON.stringify(jn)
+	4、json数组转$对象
+		var shu=["1","2","3"];
+		var $shu=$(shu);
+		$shu.each(function(i){  alert("下标："+i+"，是："+this);  })
+
+
+四.jQuery让渡$操作符
+	1.jQuery.noConflict();让渡$的使用权，后续jQuery代码中只能使用jQuery代替$
+	2.重新指定一个代替的符号var $j=jQuery.noConflict();//让渡$的使用权，并指定用$j代替$
+
+
+
+
+
+
+
+
+

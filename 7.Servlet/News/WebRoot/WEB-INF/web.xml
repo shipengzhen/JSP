@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.0" 
+	xmlns="http://java.sun.com/xml/ns/javaee" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+	http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
+  <display-name></display-name>
+  <servlet>
+    <servlet-name>LoginServlet</servlet-name>
+    <servlet-class>com.bdqn.spz.news.web.LoginServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>UpdateNews</servlet-name>
+    <servlet-class>com.bdqn.spz.news.web.UpdateNews</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>DeleteTopicServlet</servlet-name>
+    <servlet-class>com.bdqn.spz.news.web.DeleteTopicServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>IndexServlet</servlet-name>
+    <servlet-class>com.bdqn.spz.news.web.IndexServlet</servlet-class>
+  </servlet>
+
+
+
+
+
+  <servlet-mapping>
+    <servlet-name>LoginServlet</servlet-name>
+    <url-pattern>/web/LoginServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UpdateNews</servlet-name>
+    <url-pattern>/UpdateNews</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DeleteTopicServlet</servlet-name>
+    <url-pattern>/DeleteTopicServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>IndexServlet</servlet-name>
+    <url-pattern>/IndexServlet</url-pattern>
+  </servlet-mapping>
+  <welcome-file-list>
+    <welcome-file>IndexServlet</welcome-file>
+  </welcome-file-list>
+</web-app>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="MeetingRoom"
+  id="myeclipse.1502671759362"
+  context-root="/MeetingRoom"
+  j2ee-spec="6.0"
+  archive="MeetingRoom.war">
+  <attributes>
+    <attribute name="webrootdir" value="WebRoot" />
+  </attributes>
+</project-module>
+
